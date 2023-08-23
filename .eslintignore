@@ -22,9 +22,6 @@ node_modules
 screenshots
 downloads
 
-# init-db
-apps/server/src/init/db/imports/data.js
-
 # act
 **/act/artifacts
 **/act/docker/registry/auth
@@ -40,8 +37,17 @@ coverage
 # turbo
 .turbo
 
-# kube config
-.kubeconfig
-
 # dist
 dist
+
+# docs
+**/*.md
+
+# typesrcipt
+**/tsconfig.json
+
+# eslint
+**/.eslintrc.json
+
+# vite
+**/vite.config.ts

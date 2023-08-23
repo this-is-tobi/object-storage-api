@@ -31,10 +31,5 @@
         "jest": true
       }
     }
-  ],
-  "ignorePatterns":[
-    "README.md",
-    "tsconfig.json",
-    ".eslintrc.json"
   ]
 }
