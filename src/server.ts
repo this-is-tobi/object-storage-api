@@ -1,5 +1,6 @@
+import 'dotenv/config'
 import app from '@/app.js'
-import { port } from '@/utils/index.js'
+import { port } from '@/utils/env.js'
 
 const startServer = async () => {
   try {

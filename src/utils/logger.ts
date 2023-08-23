@@ -8,9 +8,9 @@ type LoggerConf = {
 }
 
 interface ReqLogsInput {
-  req: FastifyRequest<any>;
-  error?: string | Error;
-  description: string;
+  req: FastifyRequest
+  error?: string | Error
+  description: string
   extras?: Record<string, string>
 }
 
@@ -31,12 +31,7 @@ export const loggerConf: LoggerConf = {
 }
 
 export const addReqLogs = ({ req, error, description, extras }: ReqLogsInput) => {
-  const e = new Error()
-  const frame = e.stack?.split('\n')[2]
-
   const logInfos = {
-    file: frame?.split(' ')[6].split(':')[0].split('src/')[1],
-    function: frame?.split(' ')[5].split('.')[1],
     description,
     ...extras,
   }

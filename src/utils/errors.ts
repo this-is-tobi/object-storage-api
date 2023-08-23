@@ -6,7 +6,7 @@ type EnhanceErrorData = {
   extras?: Record<string, any>
 }
 
-export class EnhanceError extends Error {
+class EnhanceError extends Error {
   public description: string
   public extras: Record<string, string>
   public statusCode: number
