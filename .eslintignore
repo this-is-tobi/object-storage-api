@@ -7,8 +7,10 @@
 !.vscode/extensions.json
 
 
-# modules
-node_modules
+# node
+**/package.json
+**/package-lock.json
+**/pnpm-lock.json
 **/node_modules
 
 # env
@@ -28,8 +30,10 @@ downloads
 **/act/docker/registry/data
 
 # vitest
+vitest.config.ts
+vitest-init.ts
+vite.config.*.timestamp-*.mjs
 coverage
-./vite.config.*.timestamp-*.mjs
 
 # sonarqube
 .scannerwork
@@ -43,11 +47,5 @@ dist
 # docs
 **/*.md
 
-# typesrcipt
-**/tsconfig.json
-
-# eslint
-**/.eslintrc.json
-
-# vite
-**/vite.config.ts
+# json
+**/*.json
