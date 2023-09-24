@@ -1,5 +1,6 @@
 import type { FastifyReply, FastifyRequest } from 'fastify'
 import { addReqLogs } from './logger.js'
+import { objValueToString } from './functions.js'
 import { EnhanceErrorData } from '@/types/errors.js'
 
 export class EnhanceError extends Error {
@@ -52,7 +53,7 @@ export const handleError = (error: EnhanceError | Error, req: FastifyRequest, re
   addReqLogs({
     req,
     description,
-    ...(isEnhanceError ? { extras: error.extras } : {}),
+    ...(isEnhanceError ? { extras: objValueToString(error.extras) } : {}),
     error: isEnhanceError ? undefined : error,
   })
 }
